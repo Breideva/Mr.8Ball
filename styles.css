@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+.fade-in {
+  animation: fadeIn 1s ease-in;
+  width: 100%;
+  height: 100vh;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  background: linear-gradient(to bottom, white, navy 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 12px;
+  /* overflow: hidden; */
+}
+
+.name {
+  display: inline-flex;
+  margin: 0.5rem 0 0 0;
+  font-size: 35px;
+  font-family: "Alex Brush";
+}
+.eight {
+  font-size: 95px;
+  font-family: "MedievalSharp";
+}
+
+.main-contents {
+  display: flex;
+  justify-content: center;
+}
+.result {
+  font-size: 150px;
+  pointer-events: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: black;
+  width: 400px;
+  margin-bottom: 1rem;
+  height: 400px;
+  color: black;
+  border-radius: 200px;
+  background: radial-gradient(circle at center, white 40%, black 40%);
+}
+
+.result.bck-color {
+  background: radial-gradient(circle at center, navy 40%, black 55%);
+}
+.result.color {
+  animation: color 1s ease-out forwards;
+}
+@keyframes color {
+  0% {
+    color: transparent;
+    transform: translateY(10px);
+  }
+  20% {
+    color: transparent;
+    transform: translateY(-10px);
+  }
+  40% {
+    color: transparent;
+    transform: translateY(10px);
+  }
+  60% {
+    color: transparent;
+    transform: translateY(-10px);
+  }
+  80% {
+    color: transparent;
+    transform: translateY(10px);
+  }
+  100% {
+    color: white;
+  }
+}
+
+.main-text {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 50px;
+  font-family: "Cinzel";
+  color: white;
+}
+
+.input-result {
+  width: 35%;
+  padding: 10px;
+  background: rgb(0, 0, 0, 0.2);
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+  gap: 10px;
+}
+.sub-btn {
+  cursor: pointer;
+  width: 10%;
+  height: 55%;
+  font-size: 25px;
+  transition: all linear 0.2s;
+}
+.sub-btn:hover {
+  color: rgb(0, 0, 0, 0.5);
+}
+.answer {
+  width: 90%;
+  height: 50%;
+}
+.ans-log-text {
+  border-bottom: 4px navy solid;
+}
+.answer-log-box {
+  width: 35%;
+  height: 35vh;
+  max-height: 35vh;
+  padding: 10px;
+  background: rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow-y: auto;
+}
+.all-answers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.asked-q,
+.return-r {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 50%;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 300;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+h3 {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 5px;
+}
+p {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px white;
+}
+input {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: none;
+  border-top: transparent 2px solid;
+  outline: none;
+}
+input:hover {
+  border-top: 2px black solid;
+}
+@media (max-width: 875px) {
+  .result {
+    font-size: 100px;
+    width: 250px;
+    height: 250px;
+  }
+  .main-text {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .input-result {
+    width: 80%;
+  }
+  .answer-log-box {
+    width: 80%;
+    height: 25vh;
+    max-height: 25vh;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3,
+  input {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 40px;
+  }
+  h3,
+  input {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .result {
+    font-size: 75px;
+    width: 265px;
+    height: 265px;
+  }
+}
+@media (min-width: 1440px) {
+  .result {
+    font-size: 100px;
+    width: 400px;
+    height: 400px;
+  }
+  .name {
+    font-size: 30px;
+  }
+  .eight {
+    font-size: 85px;
+  }
+}
