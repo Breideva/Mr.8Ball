@@ -95,7 +95,7 @@
   height: 100%;
   gap: 50px;
   font-family: "Cinzel";
-  color: white;
+  color: black;
 }
 
 .input-result {
@@ -129,7 +129,7 @@
   height: 50%;
 }
 .ans-log-text {
-  border-bottom: 4px rgb(0, 0, 128, 0.5) solid;
+  border-bottom: 4px white solid;
 }
 .answer-log-box {
   width: 35%;
@@ -139,6 +139,9 @@
   background: rgb(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow-y: auto;
+}
+.ans-log-text {
+  margin-bottom: 10px;
 }
 .all-answers {
   display: flex;
@@ -151,6 +154,8 @@
   flex-direction: column;
   justify-content: start;
   width: 50%;
+  color: black;
+
 }
 
 h2 {
@@ -217,7 +222,7 @@ input:hover {
 }
 @media (min-width: 1024px) {
   h2 {
-    font-size: 40px;
+    font-size: 50px;
   }
   h3,
   input {
